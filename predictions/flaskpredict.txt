@@ -1,0 +1,15 @@
+from flask import request
+
+@app.route('/predict')
+def predict():
+    from joblib import dump, load
+    model = loaded_model = load('availabilitypredictions.joblib')
+    Avail_predict = model.predict([[request.args['number'],
+                                    request.args['rain_1h'], 
+                                    request.args['temp'], 
+                                    request.args['wind_speed'],
+                                    request.args['DayName']]])
+                                    
+                                                                                       return str(Avail_predict)
+                                                                                       
+                                                                                      app.run(debug=True)

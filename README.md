@@ -1,2 +1,20 @@
-# SoftwareEngineeringProject
-COMP30830 Final Project
+# Dublin Bikes - Group 23
+
+# Introduction 
+This project is about developing a web application which displays the occupancy and availability of Dublin bikes along with weather conditions. It evenly emphasizes on the technical skills required for a software engineering project in terms of frontend as well as backend segment. 
+Objectives of the app The application is meant for the users who wish to commute hiring a bicycle in Dublin for a period and return them back to the parking station nearby. Using this application one can easily register, choose a bike station, and hire a bike. 
+# Target
+Dublin Bikes application is built in such a way that its graphical interface is user friendly. The target members in this case are versatile age groups. Hence, the website is designed in a very responsive manner that provides accurate and prompt information.
+# What does the app do?
+The application lets the user select a station from the drop-down list. After which they click on the submit option button. Now, the application displays a bunch of markers on the map where the selected station marker is popped up. This window shows the number of available bikes stands, parking slot, available bikes as well as status. While selected on the main page it also displays the current weather in Dublin. Once the user scrolls down we are providing two-line graphs which show an average of weekly as well as hourly available bikes for the selected station. If the user wants to look at the future prediction of the weather forecast for that day, they can view that information too on the same page.
+# Structure
+The user enters the application with a click over the shareable link then a full-page map with 109 station markers gets displayed. On the same page we have given a drop-down box to select a station. Once the user selects the station marker pops-up with additional information in the onclick window. Below on the page two charts weekly and hourly based average bikes available are also shown to the user. This can be used to view the overall statistics of bikes which are available at a certain station for that period.
+# Features
+Data is collected from an official website hosted by JCDecaux on the internet and stored first in Json format and later fed to MySQL database. We are fetching the data using python scrapers hosted on EC2 which hits their server every 5 minutes a day. Thus, we do not miss on any updated data. 
+Another API being used is for collecting weather related information in Dublin. This is taken care by google weather API’s. This dynamic data is also stored in two tables in a database named current and hourly time frame data. The database is also hosted on an EC2 instance.
+Using Flask, we are introducing the website for the users where they can visit Dublin bikes app and choose bike stations nearby from their current location on google maps. When user logs into the app they can initially see map markers which denotes number of bike station in this city. After which through drop-down option they can select the station from where bikes need to be booked.
+Once the station is selected, they will be offered information regarding the bike occupancy for that station and how many parking slots are available.
+On the same page there also will be a current weather forecast displayed at the bottom. Here the user can also select the future predicted weather information for that day. A graphical representation of future forecast is shown to the user.
+The pages are interactive and responsive in terms of user friendliness as one can easily infer from the information provided to the user on a single click.
+A Machine learning model with high accuracy trained on collected data is implemented that provides weather prediction which could impact the utility and bookings of Dublin bikes.
+This entire application is served on Amazon EC2 to develop and deploy applications faster helping eliminate need to invest in hardware up front. EC2 offers 99.9% availability for each Amazon EC2 region. Works with VPC to provide robust networking and security for the compute resources.
