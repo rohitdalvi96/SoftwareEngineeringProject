@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask app</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+    <header id="heading-banner">
+        <h1>Dublin Bikes</h1>
+    </header>
+
+    <div id="weather"></div>
+
+    <div id="user_choice">
+        <div id="station_selection"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <!--Line charts-->
+    <div id="analysis_title"></div>
+    <div id="analysis_area">
+            <div id="weekly_chart"></div>
+            <td><div id="hour_chart"></div>
+    </div>
+
+    <h2>PREDICT FUTURE BIKE AVAILABILITY</h2>
+    <div id="prediction_area"></div>
+
+    <script>
+        stationDropDown();
+        predictionDropDown();
+        displayWeather();
+
+        google.charts.load('current', {'packages':['corechart']});
+
+    </script>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoxMoc5jrCrg7c7noB88amyEFVFB-1o10&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+</body>
+</html>

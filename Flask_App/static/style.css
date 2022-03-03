@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #2d3338;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    padding: 5px;
+}
+
+/*page title styles*/
+#heading-banner {
+    display: flex;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: rgba(198, 229, 255, 0.349);
+}
+
+#heading-banner h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*dropdown styles*/
+#user_choice {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
+select, input[type="date"] {
+    background-color: rgba(198, 229, 255, 0.349);
+}
+
+#user_choice label, select {
+    font-size: 15px;
+    padding: 4px 8px;
+}
+
+
+/*map styles*/
+#map {
+    height: 80%;
+    margin: 20px;
+  }
+
+
+/*chart styles*/
+#analysis_area {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/*weather styles*/
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+
+/*prediction area styles*/
+#prediction_area {
+    display: flex;
+    justify-content: space-around;
+}
